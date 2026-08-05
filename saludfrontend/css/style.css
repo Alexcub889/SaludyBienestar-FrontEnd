@@ -1,0 +1,15 @@
+body{
+    background: #2A7B9B;
+    background: linear-gradient(90deg, rgba(42, 123, 155, 1) 26%, rgba(87, 199, 133, 1) 52%);
+    text-align:center;
+    margin:auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+input{
+    padding: 10px 0px;
+}

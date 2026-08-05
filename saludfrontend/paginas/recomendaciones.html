@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud recomendaciones</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/login.html"><img src="../img/return.png" style="max-width: 30px;max-height: 30px;"> volver a login </a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/perfil.html"><img src="../img/perfil.png" style="max-width: 30px;max-height: 30px;"> Perfil</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/progreso.html"><img src="../img/progreso.png" style="max-width: 30px;max-height: 30px;">Progreso Semanal</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/recomendaciones.html"><img src="../img/recomendaciones.png" style="max-width: 30px;max-height: 30px;"> Recomendaciones</a></span>
+    </nav>
+</header>
+<br>
+<body>
+        <div class="container-fluid bg-light" style="width: 1000px; border-radius: 20px; padding: 50px">
+        <img src="../img/leaf-hand-drawn_78370-6460.avif" style="max-width: 150px;max-height: 150px; border-radius: 50%;"> <br>
+    <h1>Recomendaciones</h1>
+    <h3>Para generar nuevas recomendaciones, registre un nuevo perfil</h3>
+    <br>
+    <div style="background-color: rgb(189, 186, 186);">
+            <h2>Recomendaciones basadas en el perfil actual</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Alimentos recomendados</th>
+                        <th>Alimentos restringidos</th>
+                        <th>Ejercicios Recomendados</th>
+                        <th>Consejos de salud</th>                        
+                    </tr>
+                </thead>
+                <tbody id="tablarecomendaciones">
+                    <tr><td colspan="4">Sin datos</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <script src="../js/config.js"></script>
+        <script src="../js/recomendaciones.js"></script>
+</body>
+</html>
