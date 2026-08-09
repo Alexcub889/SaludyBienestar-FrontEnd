@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud Historial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="../css/style.css" rel="stylesheet">
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/login.html"><img src="../img/return.png" style="max-width: 30px;max-height: 30px;"> volver a login </a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/perfil.html"><img src="../img/perfil.png" style="max-width: 30px;max-height: 30px;"> Perfil</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/progreso.html"><img src="../img/progreso.png" style="max-width: 30px;max-height: 30px;">Progreso Semanal</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/recomendaciones.html"><img src="../img/recomendaciones.png" style="max-width: 30px;max-height: 30px;"> Recomendaciones</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/historial.html"><img src="../img/recomendaciones.png" style="max-width: 30px;max-height: 30px;"> Historial</a></span>
+    </nav>
+</header>
+<br>
+<body>
+        <div class="container-fluid bg-light" style="width: 1000px; border-radius: 20px; padding: 50px">
+        <img src="../img/leaf-hand-drawn_78370-6460.avif" style="max-width: 150px;max-height: 150px; border-radius: 50%;"> <br>
+    <h1>Historial de Recomendaciones</h1>
+
+    <div id="comparacionhistorial" style="display:none;">
+        <div style="background-color: rgb(189, 186, 186);">
+            <h2>Comparación: perfil anterior vs. actual</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th id="fechaanterior">Anterior</th>
+                        <th id="fechaactual">Actual</th>
+                    </tr>
+                </thead>
+                <tbody id="tablacomparacion">
+                </tbody>
+            </table>
+        </div>
+        <br>
+    </div>
+    <p id="mensajecomparacion" style="display:none;">Se necesita más de un perfil registrado para poder comparar.</p>
+
+    <br>
+
+    <div style="background-color: rgb(189, 186, 186);">
+        <h2>Historial completo</h2>
+        <div id="listahistorial">
+            <p>Sin datos</p>
+        </div>
+    </div>
+
+        <script src="../js/config.js"></script>
+        <script src="../js/historial.js"></script>
+</div>
+</body>
+</html>

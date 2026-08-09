@@ -13,6 +13,7 @@
         <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/perfil.html"><img src="../img/perfil.png" style="max-width: 30px;max-height: 30px;"> Perfil</a></span>
         <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/progreso.html"><img src="../img/progreso.png" style="max-width: 30px;max-height: 30px;">Progreso Semanal</a></span>
         <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/recomendaciones.html"><img src="../img/recomendaciones.png" style="max-width: 30px;max-height: 30px;"> Recomendaciones</a></span>
+        <span class="navbar-brand fw-bold" style="font-size: 15px;"><a href="../paginas/historial.html"><img src="../img/recomendaciones.png" style="max-width: 30px;max-height: 30px;"> Historial</a></span>
     </nav>
 </header>
 <br>
@@ -21,7 +22,12 @@
         <img src="../img/leaf-hand-drawn_78370-6460.avif" style="max-width: 150px;max-height: 150px; border-radius: 50%;"> <br>
         <h1>Crear Perfil</h1>
         <form class="mb-3" id="form_regperfil">
-            <input class="form-control" placeholder="Nivel de actividad" type="text" id="nivel_actividad" required ></input><br>
+            <select name="nivel_actividad" class="form-select" id="nivel_actividad">
+                    <option value="sedentario">Sedentario</option>
+                    <option value="levemente_activo">Levemente activo</option>
+                    <option value="moderadamente_activo">Moderadamente activo</option>
+                    <option value="muy_activo">Muy activo</option>
+                </select><br>
             <select name="objetivo" class="form-select" id="objetivo">
                     <option value="1">Perder peso</option>
                     <option value="2">Incrementar masa muscular</option>
@@ -31,13 +37,41 @@
                 </select><br>
 
             <select name="nivel_estres" class="form-select" id="nivel_estres">
-                    <option value="1">Alto</option>
-                    <option value="2">Moderado</option>
-                    <option value="3">Bajo</option>
+                    <option value="1">Alto estrés</option>
+                    <option value="2">Pocas horas de sueño</option>
+                    <option value="3">Sedentario</option>
                 </select><br>
             <input class="form-control" placeholder="Alergias" type="text" id="alergias" required></input><br>
-            <input class="form-control" placeholder="Condiciones" type="text" id="condiciones" required></input><br>
-            <button class="btn btn-secondary bg-dark text-white" type="button" id="btncondiciones" name="btncondiciones" >A&ntilde;adir Condicion</button><br>
+            <div id="condiciones">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="diabetes_tipo_2" id="cond_diabetes_tipo_2">
+                    <label class="form-check-label" for="cond_diabetes_tipo_2">Diabetes tipo 2</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="hipertension" id="cond_hipertension">
+                    <label class="form-check-label" for="cond_hipertension">Hipertensión</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="hipotiroidismo" id="cond_hipotiroidismo">
+                    <label class="form-check-label" for="cond_hipotiroidismo">Hipotiroidismo</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="obesidad" id="cond_obesidad">
+                    <label class="form-check-label" for="cond_obesidad">Obesidad</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="anemia" id="cond_anemia">
+                    <label class="form-check-label" for="cond_anemia">Anemia</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="intolerancia_lactosa" id="cond_intolerancia_lactosa">
+                    <label class="form-check-label" for="cond_intolerancia_lactosa">Intolerancia a la lactosa</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="celiaquia" id="cond_celiaquia">
+                    <label class="form-check-label" for="cond_celiaquia">Celiaquía</label>
+                </div>
+            </div><br>
             <label>Condiciones guardadas:</label><br>
             <label id="cond_label"></label><br>
             <button class="btn btn-secondary bg-dark text-white" type="submit">Crear Perfil</button>

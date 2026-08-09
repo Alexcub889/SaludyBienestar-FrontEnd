@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const tablarecomendaciones=document.getElementById("tablarecomendaciones");
     const id= sessionStorage.getItem("id");
     const crear_rec=document.getElementById("crear_rec");
+    const explicacion_humanizada=document.getElementById("explicacion_humanizada");
 
 
     function quitarguion(data){
@@ -19,13 +20,14 @@ document.addEventListener("DOMContentLoaded",()=>{
             tablarecomendaciones.innerHTML="";
                 tablarecomendaciones.innerHTML+= `
                             <tr>
-                            <td>${quitarguion(datos.alimentacion.recomendados)}</td>
-                            <td>${quitarguion(datos.alimentacion.restringidos)}</td>
-                            <td>${quitarguion(datos.ejercicio)}</td>
-                            <td>${quitarguion(datos.descanso)}</td>
+                            <td>${quitarguion(datos.resultado_estructurado.alimentacion.recomendados)}</td>
+                            <td>${quitarguion(datos.resultado_estructurado.alimentacion.restringidos)}</td>
+                            <td>${quitarguion(datos.resultado_estructurado.ejercicio)}</td>
+                            <td>${quitarguion(datos.resultado_estructurado.descanso)}</td>
                             </tr>`;
+                explicacion_humanizada.textContent = datos.explicacion_humanizada;
 
-            
+
     }
 
 //no se implemento

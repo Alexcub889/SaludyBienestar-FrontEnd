@@ -28,6 +28,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
         form_progreso.addEventListener("submit",async a=>{
+            a.preventDefault();
 
 
             let res= await fetch(`${API_BASE}/progress`,{

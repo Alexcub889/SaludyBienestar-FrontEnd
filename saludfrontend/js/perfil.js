@@ -6,10 +6,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     let l_condiciones=[];
 
-        form_regperfil.btncondiciones.onclick=() =>{
-            addcondiciones(form_regperfil.condiciones.value);
-            };
-        
+        document.querySelectorAll('#condiciones input[type="checkbox"]').forEach(cb=>{
+            cb.addEventListener("change", addcondiciones);
+        });
 
 
         function quitarguion(data){
@@ -19,14 +18,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
         function convert_estres(){
-            //creo que ahorita solo existe alto_estres, los otros dan error
             let estres;
             if(form_regperfil.nivel_estres.value=="1"){
                 estres="alto_estres";
             }else if(form_regperfil.nivel_estres.value=="2"){
-                estres="moderado_estres";
+                estres="pocas_horas_sueno";
             }else{
-                estres="bajo_estres";
+                estres="sedentario";
             }
             return estres;
         }
@@ -61,14 +59,11 @@ document.addEventListener("DOMContentLoaded",()=>{
             return objetivo;
         }
 
-        function addcondiciones(condicion){
-        if(form_regperfil.condiciones.value.length===0){
-            alert("Digite una condicion");
-        }else{
-            l_condiciones.push(condicion);
-            document.getElementById("cond_label").textContent=`${l_condiciones}`;
-        }
-
+        function addcondiciones(){
+        l_condiciones = Array.from(
+            document.querySelectorAll('#condiciones input[type="checkbox"]:checked')
+        ).map(cb => cb.value);
+        document.getElementById("cond_label").textContent=`${l_condiciones}`;
     }
             async function cargaractual(){
                 const resp=await fetch(`${API_BASE}/profiles/${id}`,{
